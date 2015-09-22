@@ -1,1 +1,5 @@
-package.sublime*
+# sublime project files
+*.sublime-*
+
+# node module dir
+node_modules/
