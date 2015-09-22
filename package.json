@@ -1,0 +1,19 @@
+{
+  "name": "dart",
+  "version": "0.0.0",
+  "description": "Pacific Amusement's dart league signup with payment processing",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilgebhard/dart.git"
+  },
+  "author": "Neil Gebhard <neilgebhard@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neilgebhard/dart/issues"
+  },
+  "homepage": "https://github.com/neilgebhard/dart#readme"
+}
