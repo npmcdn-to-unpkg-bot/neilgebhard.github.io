@@ -3,3 +3,6 @@
 
 # node module dir
 node_modules/
+
+# distribution files
+dist/
