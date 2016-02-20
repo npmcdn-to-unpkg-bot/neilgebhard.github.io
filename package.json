@@ -1,26 +1,22 @@
 {
-  "name": "dart",
+  "name": "neilgebhard",
   "version": "0.0.0",
-  "description": "Pacific Amusement's dart league signup with payment processing",
+  "description": "My personal website",
   "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/neilgebhard/dart.git"
+    "url": "https://github.com/neilgebhard/neilgebhard.git"
   },
   "author": "Neil Gebhard <neilgebhard@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/neilgebhard/dart/issues"
+    "url": "https://github.com/neilgebhard/neilgebhard/issues"
   },
-  "homepage": "https://github.com/neilgebhard/dart#readme",
+  "homepage": "https://github.com/neilgebhard/neilgebhard#readme",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-qunit": "^0.7.0",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "^0.6.1"
   }
