@@ -1,11 +1,16 @@
 # grunt-shell
 A frontend architecture for developing web applications
 
-To launch server with livereload, jshint, and browserify
+Launch local server with livereload, jshint, and browserify
+
 `grunt server`
 
-To bundle and minify
+
+ Bundle and minify
+
 `grunt`
 
-To bundle without minification
+
+Bundle without minification
+ 
 `grunt build`
