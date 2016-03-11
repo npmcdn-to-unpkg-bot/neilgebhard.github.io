@@ -1,9 +1,8 @@
-# sublime project files
+# sublime files
 *.sublime-*
 
 # node module dir
 node_modules/
 
 # distribution files
-bundle.js
-bundle.min.js
+bundle.*

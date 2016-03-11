@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         watch: {
             options: { livereload: true },
             files: ['index.html', 'Gruntfile.js', 'main.js'],
-            tasks: [ 'jshint', 'express', 'browserify', 'uglify']
+            tasks: ['jshint', 'browserify', 'uglify']
         },
         jshint: {
             files: ['Gruntfile.js', 'main.js']
@@ -42,6 +42,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-express');
 
     grunt.registerTask('server', ['express', 'watch']);
+    grunt.registerTask('build', ['browserify']);
     grunt.registerTask('default', ['jshint', 'browserify', 'uglify']);
 
 };
