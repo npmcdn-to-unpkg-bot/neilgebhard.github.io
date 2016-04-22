@@ -16,3 +16,7 @@ Launch local server with livereload, jshint, and browserify
 Bundle without minification
  
 `grunt build`
+
+Compile react
+
+`browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js`

@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    'bundle.js': ['main.js']
+                    'js/bundle.js': ['main.js']
                 }
             }
         },
@@ -44,5 +44,4 @@ module.exports = function(grunt) {
     grunt.registerTask('server', ['express', 'watch']);
     grunt.registerTask('build', ['browserify']);
     grunt.registerTask('default', ['jshint', 'browserify', 'uglify']);
-
 };

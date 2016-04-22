@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Neil's Gebhard's list of resources.">
+    <meta name="author" content="Neil Gebhard">
+    
+    <title>Resources</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link href="lib/prism.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <style>
+        body {
+            position: relative;
+        }
+
+        .header {
+            background-color: #465D8B;
+            color: #EEE;
+            padding: 60px 0;
+            font-size: 4em;
+            margin-bottom: 40px;
+        }
+
+        a {
+            color: #3A807B
+        }
+        a:hover, a:active, a:focus {
+            color: #206863;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        /* sidebar */
+        .sidebar {
+            padding-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* all links */
+        .sidebar .nav>li>a {
+            color: #999;
+            border-left: 2px solid transparent;
+            padding: 4px 20px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        /* nested links */
+        .sidebar .nav .nav>li>a {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 30px;
+            font-size: 12px;
+        }
+
+        /* active & hover links */
+        .sidebar .nav>.active>a, 
+        .sidebar .nav>li>a:hover, 
+        .sidebar .nav>li>a:focus {
+            color: #206863;                 
+            text-decoration: none;          
+            background-color: transparent;  
+            border-left-color: #206863; 
+        }
+        /* all active links */
+        .sidebar .nav>.active>a, 
+        .sidebar .nav>.active:hover>a,
+        .sidebar .nav>.active:focus>a {
+            font-weight: 700;
+        }
+        /* nested active links */
+        .sidebar .nav .nav>.active>a, 
+        .sidebar .nav .nav>.active:hover>a,
+        .sidebar .nav .nav>.active:focus>a {
+            font-weight: 500;
+        }
+
+        /* hide inactive nested list */
+        .sidebar .nav ul.nav {
+            display: none;           
+        }
+        /* show active nested list */
+        .sidebar .nav>.active>ul.nav {
+            display: block;           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">Front-end Resources</div>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <nav class="col-md-3 sidebar">
+                <ul id="sidebar" class="nav nav-stacked fixed">
+                    <li>
+                        <a href="#getting-started">Getting Started</a>
+                        <ul class="nav nav-stacked">
+                            <li><a href="#bootstrap">Bootstrap</a></li>
+                            <li><a href="#grunt">Grunt</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#javascript">Javascript</a>
+                    </li>
+                    <li>
+                        <a href="#html">HTML</a>
+                    </li>
+                    <li>
+                        <a href="#css">CSS</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="col-md-9">
+                <section id="getting-started" class="group">
+                    <h1>Getting Started</h1>
+                    <hr />
+                    <div id="bootstrap" class="subgroup">
+                        <h3><a href="https://github.com/neilgebhard/grunt-shell" target="_blank">Grunt init project example Github</a></p>
+                        <h3><a href="http://getbootstrap.com/getting-started/" target="_blank">Bootstrap</a></h3>
+                        <p class="lead">Basic Bootstrap HTML template.</p>
+                        <pre data-src="bootstrap.html"></pre>
+                    </div>
+                    <div id="grunt" class="subgroup">
+                        <h3><a href="http://gruntjs.com/getting-started" target="_blank">Grunt</a></h3>
+                        <p class="lead">Basic Gruntfile with livereload, uglify, jshint, and browserify.</p>
+                        <pre data-src="Gruntfile.js"></pre>
+                        <p><code>grunt</code>: Bundle and minify</p>
+                        <p><code>grunt server</code>: Launch local server with livereload, jshint, and browserify</p>
+                        <p><code>grunt build</code>: Bundle without minification</p>
+                    </div>
+                </section>
+                <h1 id="javascript">Javascript</h1>
+                <p class="row">
+                    <div class="col-md-3">
+                        <h5>Tools</h5>
+                        <a href="http://gulpjs.com/" target="_blank">Gulp</a>
+                        <a href="http://gruntjs.com/" target="_blank">Grunt</a>
+                        <a href="https://www.npmjs.com/package/grunt-cli" target="_blank">Grunt-cli</a>
+                        <a href="https://www.npmjs.com/package/browserify" target="_blank">Browserify</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Frameworks</h5>
+                        <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+                        <a href="http://backbonejs.org/" target="_blank">Backbone</a>
+                        <a href="https://angularjs.org/" target="_blank">Angular</a>
+                        <a href="https://facebook.github.io/react/" target="_blank">React</a>
+                        <a href="https://www.npmjs.com/package/express" target="_blank">Express</a>
+                        <a href="https://www.npmjs.com/package/bower" target="_blank">Bower</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Libraries</h5>
+                        <a href="https://github.com/jstejada/react-typist" target="_blank">React-typist</a>
+                        <a href="https://www.npmjs.com/package/d3" target="_blank">D3</a>
+                        <a href="https://www.npmjs.com/package/karma" target="_blank">Karma</a>
+                        <a href="https://www.npmjs.com/package/cordova" target="_blank">Cordova</a>
+                        <a href="https://github.com/mrdoob/three.js" target="_blank">Three.js</a>
+                        <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweetalert</a>
+                        <a href="http://tympanus.net/Development/Animocons/" target="_blank">Animated Icons</a>
+                        <a href="http://matthew.wagerfield.com/parallax/" target="_blank">Parallax</a>
+                        <a href="http://qrohlf.com/trianglify/" target="_blank">Trianglify</a>
+                        <a href="https://github.com/moment/moment" target="_blank">Moment</a>
+                        <a href="https://github.com/jasmine/jasmine" target="_blank">Jasmine</a>
+                        <a href="http://prismjs.com/" target="_blank">Prism.js</a>
+                        <a href="https://github.com/dimsemenov/PhotoSwipe" target="_blank">Photo Swipe</a>
+                        <a href="https://github.com/julianshapiro/velocity" target="_blank">Velocity</a>
+                        <a href="https://github.com/facebook/immutable-js" target="_blank">Immutable-js</a>
+                        <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a>
+                        <a href="https://github.com/twitter/typeahead.js" target="_blank">Typeahead.js</a>
+                        <a href="https://github.com/impress/impress.js" target="_blank">Impress.js</a>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Other</h5>
+                        <a href="https://react.rocks/?show=9999#!" target="_blank">React Examples</a>
+                        <a href="http://es6-features.org/#ExpressionBodies" target="_blank">ECMAScript 6 New Features</a>
+                    </div>
+                </p>
+                <h1 id="html">HTML</h1>
+                <p>
+                   <a href="http://startbootstrap.com/template-categories/all/" target="_blank">Bootstrap Templates</a> 
+                </p>
+                <h1 id="css">CSS</h1>
+                <p>
+                    <a href="https://github.com/twbs/bootstrap-sass" target="_blank">Bootstrap Sass</a> 
+                    <a href="https://www.npmjs.com/package/less" target="_blank">Less</a>
+                    <a href="http://purecss.io/" target="_blank">Pure.css</a>
+                    <a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">Font Awesome</a>
+                    <a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a>
+                </p>
+                <h1 id="design">Design</h1>
+                <p>
+                    <a href="https://github.com/FezVrasta/bootstrap-material-design" target="_blank">Bootstrap Material Design</a>
+                    <a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">Paletton (colors)</a> 
+                    <a href="https://dribbble.com/colors/86c716?percent=30" target="_blank">Dribble (colors)</a> 
+                    <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/" target="_blank">Web Dev Guide To Color</a>  
+                    <a href="http://designspiration.net/" target="_blank">Designspiration</a> 
+                    <a href="https://www.pexels.com/" target="_blank">Pexels (stock photos)</a>
+                    <a href="https://videos.pexels.com/" target="_blank">Pexels (stock videos)</a>
+                    
+                </p>
+                <h1 id="community">Community</h1>
+                <p>
+                    <a href="https://www.reddit.com/r/webdev" target="_blank">/r/webdev</a>
+                    <a href="https://www.reddit.com/r/web_design" target="_blank">/r/webdesign</a>
+                    <a href="http://calagator.org/events" target="_blank">Calagator</a>
+                </p>
+                <h1 id="other">Other</h1>
+                <p>
+                    <a href="https://www.npmjs.com/" target="_blank">NPM</a>
+                    <a href="http://yeoman.io/" target="_blank">Yeoman</a>
+                    <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
+                    <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">You Don't Know JS (book series)</a>
+                    <a href="https://developer.spotify.com/web-api/user-guide/" target="_blank">Spotify API</a>
+                </p>
+            </div>
+        </div>    
+
+    </div>
+
+    <script src="lib/prism.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>$('body').scrollspy({ target: '.sidebar', offset: 260})</script>
+</body>
+
+</html>
