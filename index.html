@@ -2,152 +2,313 @@
 <html lang="en">
 
 <head>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="You have stumbled upon Neil Gebhard's official website.">
+    <meta name="description" content="Neil's Gebhard's list of resources.">
     <meta name="author" content="Neil Gebhard">
+    
+    <title>Resources</title>
 
-    <title>Neil Gebhard</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="lib/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/grayscale.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+        }
 
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        .header {
+            background-color: #465D8B;
+            color: #EEE;
+            padding: 60px 0;
+            font-size: 4em;
+            margin-bottom: 40px;
+        }
+
+        a {
+            color: #3A807B
+        }
+        a:hover, a:active, a:focus {
+            color: #206863;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        /* sidebar */
+        .sidebar {
+            padding-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* all links */
+        .sidebar .nav>li>a {
+            color: #999;
+            border-left: 2px solid transparent;
+            padding: 4px 20px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        /* nested links */
+        .sidebar .nav .nav>li>a {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 30px;
+            font-size: 12px;
+        }
+
+        /* active & hover links */
+        .sidebar .nav>.active>a, 
+        .sidebar .nav>li>a:hover, 
+        .sidebar .nav>li>a:focus {
+            color: #206863;                 
+            text-decoration: none;          
+            background-color: transparent;  
+            border-left-color: #206863; 
+        }
+        /* all active links */
+        .sidebar .nav>.active>a, 
+        .sidebar .nav>.active:hover>a,
+        .sidebar .nav>.active:focus>a {
+            font-weight: 700;
+        }
+        /* nested active links */
+        .sidebar .nav .nav>.active>a, 
+        .sidebar .nav .nav>.active:hover>a,
+        .sidebar .nav .nav>.active:focus>a {
+            font-weight: 500;
+        }
+
+        /* hide inactive nested list */
+        .sidebar .nav ul.nav {
+            display: none;           
+        }
+        /* show active nested list */
+        .sidebar .nav>.active>ul.nav {
+            display: block;           
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-size: 1.25em;
+        }
+
+        .title-side {
+            font-weight: 300;
+            font-size: .5em;
+        }
+    </style>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-user" aria-hidden="true"></i>  <span class="light">Neil</span> Gebhard
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+<body>
+    <div class="header">
+        <div class="container">Front-end Resources</div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <nav class="col-md-3 hidden-sm hidden-xs sidebar">
+                <ul id="sidebar" class="nav nav-stacked fixed">
+                    <li>
+                        <a href="#getting-started">Getting Started</a>
+                        <ul class="nav nav-stacked">
+                            <li><a href="#bootstrap">Bootstrap</a></li>
+                            <li><a href="#grunt">Grunt</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a href="#javascript">Javascript</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a href="#html">HTML</a>
                     </li>
                     <li>
-                        <a href="resources">Resources</a>
+                        <a href="#css">CSS</a>
                     </li>
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div id="headline"></div>
-                        <a href="#about" class="btn btn-circle page-scroll" style="margin-top: 30px">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+            </nav>
+            <div class="col-md-9">
+                <section id="getting-started" class="group">
+                    <h1>Getting Started <a class="title-side" href="https://github.com/neilgebhard/grunt-shell" target="_blank">Github init</a></h1>
+                    <hr />
+                    <div id="bootstrap" class="subgroup">
+                        <h3><a href="http://getbootstrap.com/getting-started/" target="_blank">Bootstrap</a></h3>
+                        <p class="lead">Basic Bootstrap HTML template.</p>
+                        <pre data-src="bootstrap.html"></pre>
                     </div>
-                </div>
+                    <div id="grunt" class="subgroup">
+                        <h3><a href="http://gruntjs.com/getting-started" target="_blank">Grunt</a></h3>
+                        <p class="lead">Basic Gruntfile with livereload, uglify, jshint, and browserify.</p>
+                        <pre data-src="Gruntfile.js"></pre>
+                        <p><code>grunt</code> - Bundle and minify</p>
+                        <p><code>grunt server</code> - Launch local server with livereload, jshint, and browserify</p>
+                        <p><code>grunt build</code> - Bundle without minification</p>
+                    </div>
+                </section>
+                <section id="javascript" class="group">
+                    <h1>Javascript</h1>
+                    <hr />
+                    <h3>Build Tools</h3>
+                    <p>
+                        <a href="http://gulpjs.com/" target="_blank">Gulp</a> - Build system automating tasks
+                    </p>
+                    <p>
+                        <a href="http://gruntjs.com/" target="_blank">Grunt</a> - Automation, performing repetitive tasks like minification, compilation, unit testing and linting
+                    </p>
+                    <p>
+                        <a href="https://www.npmjs.com/package/browserify" target="_blank">Browserify</a> - Browserify lets you require('modules') in the browser by bundling up all of your dependencies
+                    </p>
+                    <p>
+                        <a href="https://webpack.github.io/" target="_blank">Webpack</a> - webpack is a module bundler. It packs CommonJs/AMD modules i. e. for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand.
+                    </p>
+                    <h3>Frameworks</h3>
+                    <p>
+                        <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+                    </p>
+                    <p>
+                        <a href="http://backbonejs.org/" target="_blank">Backbone</a>
+                    </p>
+                    <p>
+                        <a href="https://angularjs.org/" target="_blank">Angular</a>
+                    </p>
+                    <p>
+                        <a href="https://facebook.github.io/react/" target="_blank">React</a>
+                    </p>
+                    <p>
+                        <a href="https://www.npmjs.com/package/express" target="_blank">Express</a>
+                    </p>
+                    <p>
+                        <a href="https://www.npmjs.com/package/bower" target="_blank">Bower</a>
+                    </p>
+                    <h3>Libraries</h3>
+                    <p>
+                        <a href="https://github.com/jstejada/react-typist" target="_blank">React-typist</a>
+                    </p>
+                    <p>
+                        <a href="https://www.npmjs.com/package/d3" target="_blank">D3</a>
+                    </p>
+                    <p>
+                        <a href="https://www.npmjs.com/package/karma" target="_blank">Karma</a>
+                    </p>
+                    <p>
+                        <a href="https://www.npmjs.com/package/cordova" target="_blank">Cordova</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/mrdoob/three.js" target="_blank">Three.js</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweetalert</a>
+                    </p>
+                    <p>
+                        <a href="http://tympanus.net/Development/Animocons/" target="_blank">Animated Icons</a>
+                    </p>
+                    <p>
+                        <a href="http://matthew.wagerfield.com/parallax/" target="_blank">Parallax</a>
+                    </p>
+                    <p>
+                        <a href="http://qrohlf.com/trianglify/" target="_blank">Trianglify</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/moment/moment" target="_blank">Moment</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/jasmine/jasmine" target="_blank">Jasmine</a>
+                    </p>
+                    <p>
+                        <a href="http://prismjs.com/" target="_blank">Prism.js</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/dimsemenov/PhotoSwipe" target="_blank">Photo Swipe</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/julianshapiro/velocity" target="_blank">Velocity</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/twitter/typeahead.js" target="_blank">Typeahead.js</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/impress/impress.js" target="_blank">Impress.js</a>
+                    </p>
+                    <h3>Other</h3>
+                    <p>
+                        <a href="https://react.rocks/?show=9999#!" target="_blank">React Examples</a>
+                    </p>
+                    <p>
+                        <a href="http://es6-features.org/#ExpressionBodies" target="_blank">ECMAScript 6 New Features</a>
+                    </p>
+                </section>
+                <section id="html" class="group">
+                    <h1>HTML</h1>
+                    <hr />
+                    <p>
+                        <a href="http://startbootstrap.com/template-categories/all/" target="_blank">Bootstrap Templates</a>
+                    </p>
+                </section>
+                <section id="css" class="group">
+                    <h1>CSS</h1>
+                    <hr />
+                    <p>
+                        <a href="https://github.com/twbs/bootstrap-sass" target="_blank">Bootstrap Sass</a>
+                    </p>
+                    <p>
+                        <a href="https://www.npmjs.com/package/less" target="_blank">Less</a>
+                    </p>
+                    <p>
+                        <a href="http://purecss.io/" target="_blank">Pure.css</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">Font Awesome</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a>
+                    </p>
+                </section>
+                <section>
+                    <h1 id="design" class="group">Design</h1>
+                    <hr />
+                    <a href="https://github.com/FezVrasta/bootstrap-material-design" target="_blank">Bootstrap Material Design</a>
+                    <a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">Paletton (colors)</a> 
+                    <a href="https://dribbble.com/colors/86c716?percent=30" target="_blank">Dribble (colors)</a> 
+                    <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/" target="_blank">Web Dev Guide To Color</a>  
+                    <a href="http://designspiration.net/" target="_blank">Designspiration</a> 
+                    <a href="https://www.pexels.com/" target="_blank">Pexels (stock photos)</a>
+                    <a href="https://videos.pexels.com/" target="_blank">Pexels (stock videos)</a>                       
+                </section>
+                <section id="community" class="group">
+                    <h1>Community</h1>
+                    <hr />
+                    <a href="https://www.reddit.com/r/webdev" target="_blank">/r/webdev</a>
+                    <a href="https://www.reddit.com/r/web_design" target="_blank">/r/webdesign</a>
+                    <a href="http://calagator.org/events" target="_blank">Calagator</a>
+                </section>
+                <section id="other" class="group">
+                    <h1>Other</h1>
+                    <hr />
+                    <a href="https://www.npmjs.com/" target="_blank">NPM</a>
+                    <a href="http://yeoman.io/" target="_blank">Yeoman</a>
+                    <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
+                    <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">You Don't Know JS (book series)</a>
+                    <a href="https://developer.spotify.com/web-api/user-guide/" target="_blank">Spotify API</a>
+                </section>
             </div>
-        </div>
-    </header>
+        </div>    
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About</h2>
-                <div class="media" style="text-align: left">
-                  <div class="media-left">
-                      <img class="media-object img-circle" src="img/face.jpg" height="200" alt="My Face">
-                  </div>
-                  <div class="media-body">
-                    <h3 class="media-heading" style="text-transform: none">I am a software developer.</h3>
-                    <br/>
-                    <p>I graduated with a B.S. in Computer Science from Portland State University in 2014. Since then, I've been doing software development for Supportland, a small tech startup in Portland, OR. My expertise is in frontend web development mainly using JavaScript, HTML, CSS, Node.js, jQuery, Bootstrap, Backbone.js, Marionette.js, Underscore, Grunt/Gulp, Webpack/Browserify, and more. I also have some experience in Android and iOS mobile development.</p>
-                    <p>I am currently open to new opportunities.</p>
-                  </div>
-                </div>
-                <img>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <!-- <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Map Section -->
-    <div id="map"></div>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Me</h2>
-                <p>Feel free to email me for business inquiries or to just say hello.</p>
-                <p><a href="mailto:neilgebhard@gmail.com">neilgebhard@gmail.com</a></p>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center" style="color: grey">
-            <p>Copyright &copy; Neil Gebhard 2016</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
-    <script src="js/bundle.js"></script>
-
+    <script src="lib/prism.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>$('body').scrollspy({ target: '.sidebar', offset: 260})</script>
 </body>
 
 </html>
