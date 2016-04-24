@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Neil's Gebhard's list of resources.">
+    <meta name="description" content="Neil's Gebhard's list of front-end resources.">
     <meta name="author" content="Neil Gebhard">
     
-    <title>Resources</title>
+    <title>Front-end Resources</title>
 
     <link rel="icon" href="favicon.ico">
     <link href="lib/prism.css" rel="stylesheet" />
@@ -35,9 +35,9 @@
             color: #206863;
         }
 
-        .fixed {
+/*        .fixed {
             position: fixed;
-        }
+        }*/
 
         /* sidebar */
         .sidebar {
@@ -51,7 +51,7 @@
             color: #999;
             border-left: 2px solid transparent;
             padding: 4px 20px;
-            font-size: 13px;
+            font-size: 16px;
             font-weight: 400;
         }
 
@@ -60,7 +60,7 @@
             padding-top: 1px;
             padding-bottom: 1px;
             padding-left: 30px;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         /* active & hover links */
@@ -106,17 +106,37 @@
             font-weight: 300;
             font-size: .5em;
         }
+
+        .link-text {
+            font-size: .75em;
+        }
+
+        .link-text::before { 
+            content: " - ";
+        }
+
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 50px;
+        }
+
+        .sticky:before,
+        .sticky:after {
+            content: '';
+            display: table;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <div class="container">Front-end Resources</div>
+        <div class="container">Webdev Resources</div>
     </div>
     <div class="container">
         <div class="row">
-            <nav class="col-md-3 hidden-sm hidden-xs sidebar">
-                <ul id="sidebar" class="nav nav-stacked fixed">
+            <nav class="col-md-3 hidden-sm hidden-xs sidebar sticky">
+                <ul id="sidebar" class="nav nav-stacked">
                     <li>
                         <a href="#getting-started">Getting Started</a>
                         <ul class="nav nav-stacked">
@@ -137,7 +157,7 @@
             </nav>
             <div class="col-md-9">
                 <section id="getting-started" class="group">
-                    <h1>Getting Started <a class="title-side" href="https://github.com/neilgebhard/grunt-shell" target="_blank">Github init</a></h1>
+                    <h1>Getting Started <span class="title-side">from scratch</span></h1>
                     <hr />
                     <div id="bootstrap" class="subgroup">
                         <h3><a href="http://getbootstrap.com/getting-started/" target="_blank">Bootstrap</a></h3>
@@ -151,6 +171,7 @@
                         <p><code>grunt</code> - Bundle and minify</p>
                         <p><code>grunt server</code> - Launch local server with livereload, jshint, and browserify</p>
                         <p><code>grunt build</code> - Bundle without minification</p>
+                        <p><a href="https://github.com/neilgebhard/grunt-shell" target="_blank">Sample Github project</a></p>
                     </div>
                 </section>
                 <section id="javascript" class="group">
@@ -158,26 +179,33 @@
                     <hr />
                     <h3>Build Tools</h3>
                     <p>
-                        <a href="http://gulpjs.com/" target="_blank">Gulp</a> - Build system automating tasks
+                        <a href="http://gulpjs.com/" target="_blank">Gulp</a>
+                        <span class="link-text">Build system automating tasks</span>
                     </p>
                     <p>
-                        <a href="http://gruntjs.com/" target="_blank">Grunt</a> - Automation, performing repetitive tasks like minification, compilation, unit testing and linting
+                        <a href="http://gruntjs.com/" target="_blank">Grunt</a>
+                        <span class="link-text">Automation, performing repetitive tasks like minification, compilation, unit testing and linting</span>
                     </p>
                     <p>
-                        <a href="https://www.npmjs.com/package/browserify" target="_blank">Browserify</a> - Browserify lets you require('modules') in the browser by bundling up all of your dependencies
+                        <a href="https://www.npmjs.com/package/browserify" target="_blank">Browserify</a>
+                        <span class="link-text">Lets you require('modules') in the browser by bundling up all of your dependencies</span>
                     </p>
                     <p>
-                        <a href="https://webpack.github.io/" target="_blank">Webpack</a> - webpack is a module bundler. It packs CommonJs/AMD modules i. e. for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand.
+                        <a href="https://webpack.github.io/" target="_blank">Webpack</a>
+                        <span class="link-text">Module bundler which packs CommonJs/AMD modules for the browser</span>
                     </p>
                     <h3>Frameworks</h3>
                     <p>
                         <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+                        <span class="link-text">sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development</span>
                     </p>
                     <p>
                         <a href="http://backbonejs.org/" target="_blank">Backbone</a>
+                        <span class="link-text">Gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.</span>
                     </p>
                     <p>
                         <a href="https://angularjs.org/" target="_blank">Angular</a>
+                        <span class="link-text">AngularJS is what HTML would have been, had it been designed for building web-apps. Declarative templates with data-binding, MVW, MVVM, MVC, dependency injection and great testability story all implemented with pure client-side JavaScript.</span>
                     </p>
                     <p>
                         <a href="https://facebook.github.io/react/" target="_blank">React</a>
@@ -188,27 +216,27 @@
                     <p>
                         <a href="https://www.npmjs.com/package/bower" target="_blank">Bower</a>
                     </p>
-                    <h3>Libraries</h3>
+                    <h3>Mobile</h3>
                     <p>
-                        <a href="https://github.com/jstejada/react-typist" target="_blank">React-typist</a>
+                        <a href="https://www.npmjs.com/package/cordova" target="_blank">Cordova</a>
                     </p>
+                    <h3>Helper</h3>
                     <p>
-                        <a href="https://www.npmjs.com/package/d3" target="_blank">D3</a>
+                        <a href="https://github.com/moment/moment" target="_blank">Moment</a>
+                    </p>
+                    <h3>Testing</h3>
+                    <p>
+                        <a href="https://github.com/jasmine/jasmine" target="_blank">Jasmine</a>
                     </p>
                     <p>
                         <a href="https://www.npmjs.com/package/karma" target="_blank">Karma</a>
                     </p>
+                    <h3>Design</h3>
                     <p>
-                        <a href="https://www.npmjs.com/package/cordova" target="_blank">Cordova</a>
+                        <a href="https://github.com/impress/impress.js" target="_blank">Impress.js</a>
                     </p>
                     <p>
-                        <a href="https://github.com/mrdoob/three.js" target="_blank">Three.js</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweetalert</a>
-                    </p>
-                    <p>
-                        <a href="http://tympanus.net/Development/Animocons/" target="_blank">Animated Icons</a>
+                        <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a>
                     </p>
                     <p>
                         <a href="http://matthew.wagerfield.com/parallax/" target="_blank">Parallax</a>
@@ -217,30 +245,36 @@
                         <a href="http://qrohlf.com/trianglify/" target="_blank">Trianglify</a>
                     </p>
                     <p>
-                        <a href="https://github.com/moment/moment" target="_blank">Moment</a>
+                        <a href="http://julian.com/research/velocity" target="_blank">Velocity</a>
                     </p>
                     <p>
-                        <a href="https://github.com/jasmine/jasmine" target="_blank">Jasmine</a>
-                    </p>
-                    <p>
-                        <a href="http://prismjs.com/" target="_blank">Prism.js</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/dimsemenov/PhotoSwipe" target="_blank">Photo Swipe</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/julianshapiro/velocity" target="_blank">Velocity</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a>
+                        <a href="https://github.com/wilddeer/stickyfill" target="_blank">Stickyfill.js</a>
                     </p>
                     <p>
                         <a href="https://github.com/twitter/typeahead.js" target="_blank">Typeahead.js</a>
                     </p>
                     <p>
-                        <a href="https://github.com/impress/impress.js" target="_blank">Impress.js</a>
+                        <a href="http://prismjs.com/" target="_blank">Prism.js</a>
                     </p>
-                    <h3>Other</h3>
+                    <p>
+                        <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweetalert</a>
+                    </p>
+                    <p>
+                        <a href="http://tympanus.net/Development/Animocons/" target="_blank">Animated Icons</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/dimsemenov/PhotoSwipe" target="_blank">Photo Swipe</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/mrdoob/three.js" target="_blank">Three.js</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/jstejada/react-typist" target="_blank">React-typist</a>
+                    </p>
+                    <p>
+                        <a href="https://www.npmjs.com/package/d3" target="_blank">D3</a>
+                    </p>
+                    <h3>Learn</h3>
                     <p>
                         <a href="https://react.rocks/?show=9999#!" target="_blank">React Examples</a>
                     </p>
@@ -305,10 +339,12 @@
         </div>    
     </div>
 
-    <script src="lib/prism.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="lib/prism.js"></script>
+    <script src="lib/stickyfill.js"></script>
     <script>$('body').scrollspy({ target: '.sidebar', offset: 260})</script>
+    <script>$('.sticky').Stickyfill();</script>
 </body>
 
 </html>
