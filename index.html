@@ -35,10 +35,6 @@
             color: #206863;
         }
 
-/*        .fixed {
-            position: fixed;
-        }*/
-
         /* sidebar */
         .sidebar {
             padding-left: 20px;
@@ -62,7 +58,6 @@
             padding-left: 30px;
             font-size: 14px;
         }
-
         /* active & hover links */
         .sidebar .nav>.active>a, 
         .sidebar .nav>li>a:hover, 
@@ -84,7 +79,6 @@
         .sidebar .nav .nav>.active:focus>a {
             font-weight: 500;
         }
-
         /* hide inactive nested list */
         .sidebar .nav ul.nav {
             display: none;           
@@ -126,6 +120,12 @@
             content: '';
             display: table;
         }
+
+        .footer {
+            color: #999;
+            margin-top: 250px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -146,12 +146,27 @@
                     </li>
                     <li>
                         <a href="#javascript">Javascript</a>
+                        <ul class="nav nav-stacked">
+                            <li><a href="#build-tools">Build Tools</a></li>
+                            <li><a href="#frameworks">Frameworks</a></li>
+                            <li><a href="#helpers">Helpers</a></li>
+                            <li><a href="#design-subgroup">Design</a></li>
+                            <li><a href="#testing">Testing</a></li>
+                            <li><a href="#mobile">Mobile</a></li>
+                            <li><a href="#learn">Learn</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#html">HTML</a>
                     </li>
                     <li>
                         <a href="#css">CSS</a>
+                    </li>
+                    <li>
+                        <a href="#design">Design</a>
+                    </li>
+                    <li>
+                        <a href="#community">Community</a>
                     </li>
                 </ul>
             </nav>
@@ -177,110 +192,148 @@
                 <section id="javascript" class="group">
                     <h1>Javascript</h1>
                     <hr />
-                    <h3>Build Tools</h3>
-                    <p>
-                        <a href="http://gulpjs.com/" target="_blank">Gulp</a>
-                        <span class="link-text">Build system automating tasks</span>
-                    </p>
-                    <p>
-                        <a href="http://gruntjs.com/" target="_blank">Grunt</a>
-                        <span class="link-text">Automation, performing repetitive tasks like minification, compilation, unit testing and linting</span>
-                    </p>
-                    <p>
-                        <a href="https://www.npmjs.com/package/browserify" target="_blank">Browserify</a>
-                        <span class="link-text">Lets you require('modules') in the browser by bundling up all of your dependencies</span>
-                    </p>
-                    <p>
-                        <a href="https://webpack.github.io/" target="_blank">Webpack</a>
-                        <span class="link-text">Module bundler which packs CommonJs/AMD modules for the browser</span>
-                    </p>
-                    <h3>Frameworks</h3>
-                    <p>
-                        <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
-                        <span class="link-text">sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development</span>
-                    </p>
-                    <p>
-                        <a href="http://backbonejs.org/" target="_blank">Backbone</a>
-                        <span class="link-text">Gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.</span>
-                    </p>
-                    <p>
-                        <a href="https://angularjs.org/" target="_blank">Angular</a>
-                        <span class="link-text">AngularJS is what HTML would have been, had it been designed for building web-apps. Declarative templates with data-binding, MVW, MVVM, MVC, dependency injection and great testability story all implemented with pure client-side JavaScript.</span>
-                    </p>
-                    <p>
-                        <a href="https://facebook.github.io/react/" target="_blank">React</a>
-                    </p>
-                    <p>
-                        <a href="https://www.npmjs.com/package/express" target="_blank">Express</a>
-                    </p>
-                    <p>
-                        <a href="https://www.npmjs.com/package/bower" target="_blank">Bower</a>
-                    </p>
-                    <h3>Mobile</h3>
-                    <p>
-                        <a href="https://www.npmjs.com/package/cordova" target="_blank">Cordova</a>
-                    </p>
-                    <h3>Helper</h3>
-                    <p>
-                        <a href="https://github.com/moment/moment" target="_blank">Moment</a>
-                    </p>
-                    <h3>Testing</h3>
-                    <p>
-                        <a href="https://github.com/jasmine/jasmine" target="_blank">Jasmine</a>
-                    </p>
-                    <p>
-                        <a href="https://www.npmjs.com/package/karma" target="_blank">Karma</a>
-                    </p>
-                    <h3>Design</h3>
-                    <p>
-                        <a href="https://github.com/impress/impress.js" target="_blank">Impress.js</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a>
-                    </p>
-                    <p>
-                        <a href="http://matthew.wagerfield.com/parallax/" target="_blank">Parallax</a>
-                    </p>
-                    <p>
-                        <a href="http://qrohlf.com/trianglify/" target="_blank">Trianglify</a>
-                    </p>
-                    <p>
-                        <a href="http://julian.com/research/velocity" target="_blank">Velocity</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/wilddeer/stickyfill" target="_blank">Stickyfill.js</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/twitter/typeahead.js" target="_blank">Typeahead.js</a>
-                    </p>
-                    <p>
-                        <a href="http://prismjs.com/" target="_blank">Prism.js</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweetalert</a>
-                    </p>
-                    <p>
-                        <a href="http://tympanus.net/Development/Animocons/" target="_blank">Animated Icons</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/dimsemenov/PhotoSwipe" target="_blank">Photo Swipe</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/mrdoob/three.js" target="_blank">Three.js</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/jstejada/react-typist" target="_blank">React-typist</a>
-                    </p>
-                    <p>
-                        <a href="https://www.npmjs.com/package/d3" target="_blank">D3</a>
-                    </p>
-                    <h3>Learn</h3>
-                    <p>
-                        <a href="https://react.rocks/?show=9999#!" target="_blank">React Examples</a>
-                    </p>
-                    <p>
-                        <a href="http://es6-features.org/#ExpressionBodies" target="_blank">ECMAScript 6 New Features</a>
-                    </p>
+                    <div id="build-tools" class="subgroup">
+                        <h3>Build Tools</h3>
+                        <p>
+                            <a href="http://gulpjs.com/" target="_blank">Gulp</a>
+                            <span class="link-text">Build system automating tasks</span>
+                        </p>
+                        <p>
+                            <a href="http://gruntjs.com/" target="_blank">Grunt</a>
+                            <span class="link-text">Automation, performing repetitive tasks like minification, compilation, unit testing and linting</span>
+                        </p>
+                        <p>
+                            <a href="https://www.npmjs.com/package/browserify" target="_blank">Browserify</a>
+                            <span class="link-text">Lets you require('modules') in the browser by bundling up all of your dependencies</span>
+                        </p>
+                        <p>
+                            <a href="https://webpack.github.io/" target="_blank">Webpack</a>
+                            <span class="link-text">Module bundler which packs CommonJs/AMD modules for the browser</span>
+                        </p>
+                        <p>
+                            <a href="https://www.npmjs.com/" target="_blank">NPM</a>
+                        </p>
+                        <p>
+                            <a href="https://nodejs.org/en/" target="_blank">Node</a>
+                        </p>
+                        <p>
+                            <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
+                        </p>
+                        <p>
+                            <a href="https://www.djangoproject.com/" target="_blank">Django</a>
+                        </p>
+                        <p>
+                            <a href="http://yeoman.io/" target="_blank">Yeoman</a>
+                        </p>
+                    </div>
+                    <div id="frameworks" class="subgroup">
+                        <h3>Frameworks</h3>
+                        <p>
+                            <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+                            <span class="link-text">sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development</span>
+                        </p>
+                        <p>
+                            <a href="http://backbonejs.org/" target="_blank">Backbone</a>
+                            <span class="link-text">Gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.</span>
+                        </p>
+                        <p>
+                            <a href="https://angularjs.org/" target="_blank">Angular</a>
+                            <span class="link-text">What HTML would have been, had it been designed for building web-apps. Declarative templates with data-binding, MVW, MVVM, MVC, dependency injection and great testability story all implemented with pure client-side JavaScript.</span>
+                        </p>
+                        <p>
+                            <a href="https://facebook.github.io/react/" target="_blank">React</a>
+                        </p>
+                        <p>
+                            <a href="https://www.npmjs.com/package/express" target="_blank">Express</a>
+                        </p>
+                        <p>
+                            <a href="https://www.npmjs.com/package/bower" target="_blank">Bower</a>
+                        </p>
+                    </div>
+                    <div id="helpers" class="subgroup">
+                        <h3>Helpers</h3>
+                        <p>
+                            <a href="https://github.com/moment/moment" target="_blank">Moment</a>
+                        </p>
+                    </div>
+                    <div id="design-subgroup" class="subgroup">
+                        <h3>Design</h3>
+                        <p>
+                            <a href="https://github.com/impress/impress.js" target="_blank">Impress.js</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a>
+                        </p>
+                        <p>
+                            <a href="http://matthew.wagerfield.com/parallax/" target="_blank">Parallax</a>
+                        </p>
+                        <p>
+                            <a href="http://qrohlf.com/trianglify/" target="_blank">Trianglify</a>
+                        </p>
+                        <p>
+                            <a href="http://julian.com/research/velocity" target="_blank">Velocity</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/wilddeer/stickyfill" target="_blank">Stickyfill.js</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/twitter/typeahead.js" target="_blank">Typeahead.js</a>
+                        </p>
+                        <p>
+                            <a href="http://prismjs.com/" target="_blank">Prism.js</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweetalert</a>
+                        </p>
+                        <p>
+                            <a href="http://tympanus.net/Development/Animocons/" target="_blank">Animated Icons</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/dimsemenov/PhotoSwipe" target="_blank">Photo Swipe</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/mrdoob/three.js" target="_blank">Three.js</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/jstejada/react-typist" target="_blank">React-typist</a>
+                        </p>
+                        <p>
+                            <a href="https://www.npmjs.com/package/d3" target="_blank">D3</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/FezVrasta/bootstrap-material-design" target="_blank">Bootstrap Material Design</a>
+                        </p>
+                    </div>
+                    <div id="testing" class="subgroup">
+                        <h3>Testing</h3>
+                        <p>
+                            <a href="https://github.com/jasmine/jasmine" target="_blank">Jasmine</a>
+                        </p>
+                        <p>
+                            <a href="https://www.npmjs.com/package/karma" target="_blank">Karma</a>
+                        </p>
+                    </div>
+                    <div id="mobile" class="subgroup">
+                        <h3>Mobile</h3>
+                        <p>
+                            <a href="https://www.npmjs.com/package/cordova" target="_blank">Cordova</a>
+                        </p>
+                        <p>
+                            <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a>
+                        </p>
+                    </div>
+                    <div id="learn" class="subgroup">
+                        <h3>Learn</h3>
+                        <p>
+                            <a href="https://react.rocks/?show=9999#!" target="_blank">React Examples</a>
+                        </p>
+                        <p>
+                            <a href="http://es6-features.org/#ExpressionBodies" target="_blank">ECMAScript 6 New Features</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">You Don't Know JS (book series)</a>
+                        </p>
+                    </div>
                 </section>
                 <section id="html" class="group">
                     <h1>HTML</h1>
@@ -293,10 +346,13 @@
                     <h1>CSS</h1>
                     <hr />
                     <p>
-                        <a href="https://github.com/twbs/bootstrap-sass" target="_blank">Bootstrap Sass</a>
+                        <a href="https://www.npmjs.com/package/less" target="_blank">Less</a>
                     </p>
                     <p>
-                        <a href="https://www.npmjs.com/package/less" target="_blank">Less</a>
+                        <a href="http://sass-lang.com/" target="_blank">Sass</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/twbs/bootstrap-sass" target="_blank">Bootstrap Sass</a>
                     </p>
                     <p>
                         <a href="http://purecss.io/" target="_blank">Pure.css</a>
@@ -308,42 +364,53 @@
                         <a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a>
                     </p>
                 </section>
-                <section>
-                    <h1 id="design" class="group">Design</h1>
+                <section id="design" class="group">
+                    <h1>Design</h1>
                     <hr />
-                    <a href="https://github.com/FezVrasta/bootstrap-material-design" target="_blank">Bootstrap Material Design</a>
-                    <a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">Paletton (colors)</a> 
-                    <a href="https://dribbble.com/colors/86c716?percent=30" target="_blank">Dribble (colors)</a> 
-                    <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/" target="_blank">Web Dev Guide To Color</a>  
-                    <a href="http://designspiration.net/" target="_blank">Designspiration</a> 
-                    <a href="https://www.pexels.com/" target="_blank">Pexels (stock photos)</a>
-                    <a href="https://videos.pexels.com/" target="_blank">Pexels (stock videos)</a>                       
+                    <p>
+                        <a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">Paletton (colors)</a>
+                    </p>
+                    <p>
+                        <a href="https://dribbble.com/colors/86c716?percent=30" target="_blank">Dribble (colors)</a>
+                    </p>
+                    <p>
+                        <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/" target="_blank">Web Dev Guide To Color</a>
+                    </p>
+                    <p>
+                        <a href="http://designspiration.net/" target="_blank">Designspiration</a>
+                    </p>
+                    <p>
+                        <a href="https://www.pexels.com/" target="_blank">Pexels (stock photos)</a>
+                    </p>
+                    <p>
+                        <a href="https://videos.pexels.com/" target="_blank">Pexels (stock videos)</a>                       
+                    </p>
                 </section>
                 <section id="community" class="group">
                     <h1>Community</h1>
                     <hr />
-                    <a href="https://www.reddit.com/r/webdev" target="_blank">/r/webdev</a>
-                    <a href="https://www.reddit.com/r/web_design" target="_blank">/r/webdesign</a>
-                    <a href="http://calagator.org/events" target="_blank">Calagator</a>
-                </section>
-                <section id="other" class="group">
-                    <h1>Other</h1>
-                    <hr />
-                    <a href="https://www.npmjs.com/" target="_blank">NPM</a>
-                    <a href="http://yeoman.io/" target="_blank">Yeoman</a>
-                    <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
-                    <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">You Don't Know JS (book series)</a>
-                    <a href="https://developer.spotify.com/web-api/user-guide/" target="_blank">Spotify API</a>
+                    <p>
+                        <a href="https://www.reddit.com/r/webdev" target="_blank">/r/webdev</a>
+                    </p>
+                    <p>
+                        <a href="https://www.reddit.com/r/web_design" target="_blank">/r/webdesign</a>
+                    </p>
+                    <p>
+                        <a href="http://calagator.org/events" target="_blank">Calagator</a>
+                    </p>
                 </section>
             </div>
         </div>    
+    </div>
+    <div class="container text-center footer">
+        <p>Copyright &copy; Neil Gebhard 2016</p>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="lib/prism.js"></script>
     <script src="lib/stickyfill.js"></script>
-    <script>$('body').scrollspy({ target: '.sidebar', offset: 260})</script>
+    <script>$('body').scrollspy({ target: '.sidebar', offset: 25})</script>
     <script>$('.sticky').Stickyfill();</script>
 </body>
 
