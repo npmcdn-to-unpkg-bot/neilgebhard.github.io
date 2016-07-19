@@ -1,5 +1,5 @@
 # grunt-shell
-A frontend architecture for developing web applications
+My Github website
 
 #### Commands
 
