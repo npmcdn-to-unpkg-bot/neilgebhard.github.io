@@ -417,6 +417,12 @@
     <script src="lib/stickyfill.js"></script>
     <script>$('body').scrollspy({ target: '.sidebar', offset: 25})</script>
     <script>$('.sticky').Stickyfill();</script>
+    <script>
+        $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
+            console.log(a[0].content);
+            $("#quote-section").html(a[0].content + "<p>&mdash; " + a[0].title + "</p>");
+        });
+    </script>
 </body>
 
 </html>
