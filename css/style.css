@@ -26,37 +26,83 @@
     max-width: 720px;
 }
 
+body {
+    color: #666;
+}
+
+.media {
+    margin-top: 100px !important;
+}
+
+.thumbnail:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#examples > a {
+    text-decoration: none;
+}
+
+.card {
+    width: 210px;
+    display: inline-block;
+}
+
+.card > a {
+    text-decoration: none;
+}
+
 /* timesheet */
 .timesheet {
     height: 180px;
 }
 
 /* typed */
-.typed-cursor{
+.typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .typed-cursor {
     font-size: 70px;
     position: relative;
     left: 5px;
-    top: -5px;  
+    top: -5px;
 }

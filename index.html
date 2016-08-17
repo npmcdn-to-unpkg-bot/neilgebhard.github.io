@@ -10,32 +10,6 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/sbstjn/timesheet.js/master/dist/timesheet.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
-    <style>
-    .card {
-        width: 210px;
-        display: inline-block;
-    }
-    
-    .media {
-        margin-top: 100px !important;
-    }
-    
-    .thumbnail:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    
-    #examples > a {
-        text-decoration: none;
-    }
-    
-    body {
-        color: #666;
-    }
-    
-    .caption > p {
-        text-decoration: none;
-    }
-    </style>
 </head>
 
 <body>
@@ -45,7 +19,6 @@
     </header>
     <main id="content" class="container">
         <section data-aos="fade-up">
-            <h3 style="padding-bottom: 35px">Career Timeline</h3>
             <figure id="timesheet" class="white"></figure>
         </section>
         <section data-aos="fade-up">
@@ -97,12 +70,23 @@
             <h3>Portfolio</h3>
             <div class="cards">
                 <div class="card">
+                    <a href="https://github.com/neilgebhard/grunt-shell" class="thumbnail-link">
+                        <div class="thumbnail">
+                            <img src="img/frontend.jpg" alt="Grunt Frontend">
+                            <div class="caption">
+                                <h4>Grunt Frontend Architecture</h4>
+                                <p>NPM, Minification, JSLint, Livereload</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
                     <a href="http://supportland.com/citizen/categories/all/businesses" class="thumbnail-link">
                         <div class="thumbnail">
                             <img src="img/supportland.jpeg" alt="Supportland">
                             <div class="caption">
                                 <h4>Supportland</h4>
-                                <p>Single Page App Frontend</p>
+                                <p>Single Page App, Backbone.js, Marionette.js</p>
                             </div>
                         </div>
                     </a>
@@ -113,16 +97,7 @@
                             <img src="img/algorithms.jpeg" alt="Algorithms">
                             <div class="caption">
                                 <h4>Algorithms</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="http://neilgebhard.tech" class="thumbnail-link">
-                        <div class="thumbnail">
-                            <img src="img/weather-1.jpg" alt="Node React Weather App">
-                            <div class="caption">
-                                <h4>Node React Weather App</h4>
+                                <p>Javascript</p>
                             </div>
                         </div>
                     </a>
@@ -132,17 +107,19 @@
                         <div class="thumbnail">
                             <img src="img/weather-2.jpeg" alt="Vanilla Weather Web App">
                             <div class="caption">
-                                <h4>Vanilla Weather Web App</h4>
+                                <h4>Weather App</h4>
+                                <p>Vanilla JS</p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="card">
-                    <a href="https://github.com/neilgebhard/grunt-shell" class="thumbnail-link">
+                    <a href="http://neilgebhard.tech" class="thumbnail-link">
                         <div class="thumbnail">
-                            <img src="img/frontend.jpg" alt="Grunt Frontend">
+                            <img src="img/weather-1.jpg" alt="Node React Weather App">
                             <div class="caption">
-                                <h4>Grunt Frontend Architecture</h4>
+                                <h4>Weather App</h4>
+                                <p>Node, React, AWS</p>
                             </div>
                         </div>
                     </a>
@@ -157,58 +134,7 @@
     <script src="lib/aos.js"></script>
     <script src="lib/moment.js"></script>
     <script src="lib/typed.js"></script>
-    <script>
-    // timesheet.js
-    $(document).ready(function() {
-        var now = moment().format('MM/YYYY');
-        new Timesheet('timesheet', 2011, 2016, [
-            ['03/2011', '03/2014', 'Computer Science B.S.', 'ipsum'],
-            ['06/2013', '08/2014', 'Web Development Intern, Pacific Amusement Inc.', 'default'],
-            ['09/2013', '03/2014', 'iOS Development Intern, KidzPlan', 'default'],
-            ['09/2013', '03/2014', 'Professor Asstistant, Kristin Tufte', 'default'],
-            ['05/2014', now, 'Front-end Developer, Supportland', 'lorem'],
-            ['05/2016', now, 'Full Stack Developer, WelVU', 'dolor']
-        ]);
-
-        // typed.js
-        $("#typed-strings").typed({
-            strings: ['<span class="hero-title">Neil Gebhard</span>'],
-            contentType: 'html',
-            typeSpeed: 25
-        });
-
-        // aos.js
-        AOS.init();
-
-        // minigrid.js
-        // var grid = new Minigrid({
-        //     container: '.cards',
-        //     item: '.card',
-        //     gutter: 20
-        // });
-        // grid.mount();
-    });
-    (function() {
-        var grid;
-
-        function init() {
-            grid = new Minigrid({
-                container: '.cards',
-                item: '.card',
-                gutter: 12
-            });
-            grid.mount();
-        }
-
-        // mount
-        function update() {
-            grid.mount();
-        }
-
-        document.addEventListener('DOMContentLoaded', init);
-        window.addEventListener('resize', update);
-    })();
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
