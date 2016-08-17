@@ -1,3 +1,5 @@
+// Given an array of integers, find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N.
+
 function findEvenIndex(arr) {
 	function addArray(arr) { return arr.reduce(function(acc, n) { return acc + n; }, 0); }
 

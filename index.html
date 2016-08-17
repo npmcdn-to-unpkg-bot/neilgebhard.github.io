@@ -2,421 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Neil's Gebhard's list of front-end resources.">
-    <meta name="author" content="Neil Gebhard">
-    
-    <title>Webdev Resources</title>
-
-    <link rel="icon" href="favicon.ico">
-    <link href="lib/prism.css" rel="stylesheet" />
+    <title>Neil Gebhard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-    <style>
-        body {
-            position: relative;
-        }
-
-        .header {
-            background-color: #465D8B;
-            color: #EEE;
-            padding: 60px 0;
-            font-size: 4em;
-            margin-bottom: 40px;
-        }
-
-        a {
-            color: #3A807B
-        }
-        a:hover, a:active, a:focus {
-            color: #206863;
-        }
-
-        /* sidebar */
-        .sidebar {
-            padding-left: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        /* all links */
-        .sidebar .nav>li>a {
-            color: #999;
-            border-left: 2px solid transparent;
-            padding: 4px 20px;
-            font-size: 16px;
-            font-weight: 400;
-        }
-
-        /* nested links */
-        .sidebar .nav .nav>li>a {
-            padding-top: 1px;
-            padding-bottom: 1px;
-            padding-left: 30px;
-            font-size: 14px;
-        }
-        /* active & hover links */
-        .sidebar .nav>.active>a, 
-        .sidebar .nav>li>a:hover, 
-        .sidebar .nav>li>a:focus {
-            color: #206863;                 
-            text-decoration: none;          
-            background-color: transparent;  
-            border-left-color: #206863; 
-        }
-        /* all active links */
-        .sidebar .nav>.active>a, 
-        .sidebar .nav>.active:hover>a,
-        .sidebar .nav>.active:focus>a {
-            font-weight: 700;
-        }
-        /* nested active links */
-        .sidebar .nav .nav>.active>a, 
-        .sidebar .nav .nav>.active:hover>a,
-        .sidebar .nav .nav>.active:focus>a {
-            font-weight: 500;
-        }
-        /* hide inactive nested list */
-        .sidebar .nav ul.nav {
-            display: none;           
-        }
-        /* show active nested list */
-        .sidebar .nav>.active>ul.nav {
-            display: block;           
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        p {
-            font-size: 1.25em;
-        }
-
-        .link-text {
-            font-size: .75em;
-        }
-
-        .link-text::before { 
-            content: " - ";
-        }
-
-        .sticky {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 50px;
-        }
-
-        .sticky:before,
-        .sticky:after {
-            content: '';
-            display: table;
-        }
-
-        .footer {
-            color: #999;
-            margin-top: 250px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/sbstjn/timesheet.js/master/dist/timesheet.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">Personal Webdev Resources</div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <nav class="col-md-3 hidden-sm hidden-xs sidebar sticky">
-                <ul id="sidebar" class="nav nav-stacked">
-                    <li>
-                        <a href="#getting-started">Getting Started</a>
-                        <ul class="nav nav-stacked">
-                            <li><a href="#bootstrap">Bootstrap</a></li>
-                            <li><a href="#grunt">Grunt</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#javascript">Javascript</a>
-                        <ul class="nav nav-stacked">
-                            <li><a href="#build-tools">Build Tools</a></li>
-                            <li><a href="#frameworks">Frameworks</a></li>
-                            <li><a href="#helpers">Helpers</a></li>
-                            <li><a href="#design-subgroup">Design</a></li>
-                            <li><a href="#testing">Testing</a></li>
-                            <li><a href="#mobile">Mobile</a></li>
-                            <li><a href="#learn">Learn</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#html">HTML</a>
-                    </li>
-                    <li>
-                        <a href="#css">CSS</a>
-                    </li>
-                    <li>
-                        <a href="#design">Design</a>
-                    </li>
-                    <li>
-                        <a href="#community">Community</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="col-md-9">
-                <section id="getting-started" class="group">
-                    <h1>Getting Started</h1>
-                    <hr />
-                    <div id="bootstrap" class="subgroup">
-                        <h3><a href="http://getbootstrap.com/getting-started/" target="_blank">Bootstrap</a></h3>
-                        <p class="lead">Basic Bootstrap HTML template.</p>
-                        <pre data-src="bootstrap.html"></pre>
-                    </div>
-                    <div id="grunt" class="subgroup">
-                        <h3><a href="http://gruntjs.com/getting-started" target="_blank">Grunt</a></h3>
-                        <p class="lead">Basic Gruntfile with livereload, uglify, jshint, and browserify.</p>
-                        <pre data-src="Gruntfile.js"></pre>
-                        <p><code>grunt</code> - Bundle and minify</p>
-                        <p><code>grunt server</code> - Launch local server with livereload, jshint, and browserify</p>
-                        <p><code>grunt build</code> - Bundle without minification</p>
-                        <p><a href="https://github.com/neilgebhard/grunt-shell" target="_blank">Sample Github project</a></p>
-                    </div>
-                </section>
-                <section id="javascript" class="group">
-                    <h1>Javascript</h1>
-                    <hr />
-                    <div id="build-tools" class="subgroup">
-                        <h3>Build Tools</h3>
-                        <p>
-                            <a href="http://gulpjs.com/" target="_blank">Gulp</a>
-                        </p>
-                        <p>
-                            <a href="http://gruntjs.com/" target="_blank">Grunt</a>
-                        </p>
-                        <p>
-                            <a href="https://www.npmjs.com/package/browserify" target="_blank">Browserify</a>
-                        </p>
-                        <p>
-                            <a href="https://webpack.github.io/" target="_blank">Webpack</a>
-                        </p>
-                        <p>
-                            <a href="https://www.npmjs.com/" target="_blank">NPM</a>
-                        </p>
-                        <p>
-                            <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
-                        </p>
-                        <p>
-                            <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
-                        </p>
-                        <p>
-                            <a href="https://www.djangoproject.com/" target="_blank">Django</a>
-                        </p>
-                        <p>
-                            <a href="http://yeoman.io/" target="_blank">Yeoman</a>
-                        </p>
-                        <p>
-                            <a href="https://www.npmjs.com/package/bower" target="_blank">Bower</a>
-                        </p>
-                    </div>
-                    <div id="frameworks" class="subgroup">
-                        <h3>Frameworks</h3>
-                        <p>
-                            <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
-                        </p>
-                        <p>
-                            <a href="http://backbonejs.org/" target="_blank">Backbone</a>
-                        </p>
-                        <p>
-                            <a href="http://marionettejs.com/" target="_blank">Marionette</a>
-                        </p>
-                        <p>
-                            <a href="https://angularjs.org/" target="_blank">Angular</a>
-                        </p>
-                        <p>
-                            <a href="https://facebook.github.io/react/" target="_blank">React</a>
-                        </p>
-                        <p>
-                            <a href="https://www.npmjs.com/package/express" target="_blank">Express</a>
-                        </p>
-                    </div>
-                    <div id="helpers" class="subgroup">
-                        <h3>Helpers</h3>
-                        <p>
-                            <a href="https://github.com/moment/moment" target="_blank">Moment</a>
-                        </p>
-                    </div>
-                    <div id="design-subgroup" class="subgroup">
-                        <h3>Design</h3>
-                        <p>
-                            <a href="https://github.com/impress/impress.js" target="_blank">Impress.js</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/nnnick/Chart.js" target="_blank">Chart.js</a>
-                        </p>
-                        <p>
-                            <a href="http://matthew.wagerfield.com/parallax/" target="_blank">Parallax</a>
-                        </p>
-                        <p>
-                            <a href="http://qrohlf.com/trianglify/" target="_blank">Trianglify</a>
-                        </p>
-                        <p>
-                            <a href="http://julian.com/research/velocity" target="_blank">Velocity</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/wilddeer/stickyfill" target="_blank">Stickyfill.js</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/twitter/typeahead.js" target="_blank">Typeahead.js</a>
-                        </p>
-                        <p>
-                            <a href="http://prismjs.com/" target="_blank">Prism.js</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweetalert</a>
-                        </p>
-                        <p>
-                            <a href="http://tympanus.net/Development/Animocons/" target="_blank">Animated Icons</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/dimsemenov/PhotoSwipe" target="_blank">Photo Swipe</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/mrdoob/three.js" target="_blank">Three.js</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/jstejada/react-typist" target="_blank">React-typist</a>
-                        </p>
-                        <p>
-                            <a href="https://www.npmjs.com/package/d3" target="_blank">D3</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/FezVrasta/bootstrap-material-design" target="_blank">Bootstrap Material Design</a>
-                        </p>
-                    </div>
-                    <div id="testing" class="subgroup">
-                        <h3>Testing</h3>
-                        <p>
-                            <a href="https://github.com/jasmine/jasmine" target="_blank">Jasmine</a>
-                        </p>
-                        <p>
-                            <a href="https://www.npmjs.com/package/karma" target="_blank">Karma</a>
-                        </p>
-                    </div>
-                    <div id="mobile" class="subgroup">
-                        <h3>Mobile</h3>
-                        <p>
-                            <a href="https://www.npmjs.com/package/cordova" target="_blank">Cordova</a>
-                        </p>
-                        <p>
-                            <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a>
-                        </p>
-                    </div>
-                    <div id="learn" class="subgroup">
-                        <h3>Learn</h3>
-                        <p>
-                            <a href="https://react.rocks/?show=9999#!" target="_blank">React Examples</a>
-                        </p>
-                        <p>
-                            <a href="http://es6-features.org/#ExpressionBodies" target="_blank">ECMAScript 6 New Features</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">You Don't Know JS (book series)</a>
-                        </p>
-                        <p>
-                            <a href="http://youmightnotneedjquery.com/" target="_blank">You Might Not Need jQuery</a>
-                        </p>
-                    </div>
-                </section>
-                <section id="html" class="group">
-                    <h1>HTML</h1>
-                    <hr />
-                    <p>
-                        <a href="http://startbootstrap.com/template-categories/all/" target="_blank">Bootstrap Templates</a>
-                    </p>
-                </section>
-                <section id="css" class="group">
-                    <h1>CSS</h1>
-                    <hr />
-                    <p>
-                        <a href="https://www.npmjs.com/package/less" target="_blank">Less</a>
-                    </p>
-                    <p>
-                        <a href="http://sass-lang.com/" target="_blank">Sass</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/twbs/bootstrap-sass" target="_blank">Bootstrap Sass</a>
-                    </p>
-                    <p>
-                        <a href="http://purecss.io/" target="_blank">Pure.css</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">Font Awesome</a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a>
-                    </p>
-                </section>
-                <section id="design" class="group">
-                    <h1>Design</h1>
-                    <hr />
-                    <p>
-                        <a href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/" target="_blank">Web Dev Guide To Color</a>
-                    </p>
-                    <p>
-                        <a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">Paletton</a>
-                        <span class="link-text">color scheme designer</span>
-                    </p>
-                    <p>
-                        <a href="https://dribbble.com/colors/86c716?percent=30" target="_blank">Dribble (colors)</a>
-                    </p>
-                    <p>
-                        <a href="http://designspiration.net/" target="_blank">Designspiration</a>
-                    </p>
-                    <p>
-                        <a href="https://www.pexels.com/" target="_blank">Pexels (stock photos)</a>
-                        <span class="link-text">stock photos</span>
-                    </p>
-                    <p>
-                        <a href="https://videos.pexels.com/" target="_blank">Pexels</a>
-                        <span class="link-text">stock videos</span>
-                    </p>
-                    <p>
-                        <a href="https://www.gimp.org/" target="_blank">Gimp</a>
-                        <span class="link-text">image editor</span>
-                    </p>
-                    <p>
-                        <a href="http://www.getpaint.net/index.html" target="_blank">Paint.net</a>
-                        <span class="link-text">basic image editor</span>
-                    </p>
-                </section>
-                <section id="community" class="group">
-                    <h1>Communities</h1>
-                    <hr />
-                    <p>
-                        <a href="https://www.reddit.com/r/webdev" target="_blank">/r/webdev</a>
-                    </p>
-                    <p>
-                        <a href="https://www.reddit.com/r/web_design" target="_blank">/r/webdesign</a>
-                    </p>
-                    <p>
-                        <a href="http://calagator.org/events" target="_blank">Calagator</a>
-                    </p>
-                </section>
+    <header class="hero-top" style="background-image: url(https://static.pexels.com/assets/headers/mountains-b687f987e82bb5813f2c1551be8616a232a414dfcdfd50859a9c7204dd8d6bb4.jpg">
+    	<div style="height: 200px"></div>
+    	<span id="typed-strings"></span>
+    </header>
+    <section id="content" class="container">
+        <h3 class="text-muted" style="padding-bottom: 15px">Career Timeline</h3>
+        <p id="timesheet" class="white"></p>
+        <div class="media" style="margin-top: 50px">
+            <div class="media-left">
+                <a href="supportland.com">
+                    <img class="media-object" src="img/supp-logo.png" alt="Supportland Logo">
+                </a>
             </div>
-        </div>    
-    </div>
-    <div class="container text-center footer">
-        <p>Copyright &copy; Neil Gebhard 2016</p>
-    </div>
+            <div class="media-body">
+                <h3 class="media-heading">Front-end Developer, May 2014 to Present</h3>
+                <h4>Supportland (Portland, OR)</h4>
+                <p>Developed a a SaaS single-page web application platform as a loyalty program for local independent businesses. Converted wireframes into Marionette views with Underscore templates. Utilized API endpoints with Backbone models. Leveraged Bootstrap to accomplish mobile responsiveness. Followed UX best practices to maximize usability. Engaged in mobile development in iOS using Swift/Xcode and Android using Java/Android Studio</p>
+                <p>Technologies: JavaScript, HTML, CSS, Backbone.js, Marionette.js, Underscore, Bootstrap, Node.js, Gulp, Webpack, Android, Java, iOS, Swift, Git</p>
+            </div>
+        </div>
+        <div class="media" style="margin-top: 50px">
+            <div class="media-left">
+                <a href="welvu.com">
+                    <img class="media-object" src="img/welvu-logo.png" alt="Welvu Logo" width="150">
+                </a>
+            </div>
+            <div class="media-body">
+                <h3 class="media-heading">Full Stack Developer, May 2016 to Present</h3>
+                <h4>WelVU (Portland, OR)</h4>
+                <p>Developed a web application to help patients remember what doctors say through videos, drawings, and diagrams. Implemented front-end in bootstrap with consideration to UX and backend using PHP and MySQL. Converted requirements into individual technical tasks. Tested and deployed software in AWS.</p>
+                <p>Technologies: JavaScript, HTML, CSS, PHP, SQL, AWS, Bootstrap, Git</p>
+            </div>
+        </div>
+        <div class="media" style="margin-top: 50px">
+            <div class="media-left">
+                <a href="welvu.com">
+                    <img class="media-object" src="img/kidzplan-logo.png" alt="Welvu Logo" width="150">
+                </a>
+            </div>
+            <div class="media-body">
+                <h3 class="media-heading">iOS Development Intern, Sept. 2013 to Mar. 2014</h3>
+                <h4>WelVU (Portland, OR)</h4>
+                <p>Designed and implemented an iOS application to help parents manage the behavior of children through a tracking system with rewards. Collaborated with client to establish requirements. Implemented views based off wireframes that integrated with backend services.</p>
+                <p>Technologies: Xcode, iOS, Objective-C, Git</p>
+            </div>
+        </div>
+        <h3>Work Examples</h3>
+        <a href="http://neilgebhard.tech">Node React Weather App</a>
+        <a href="http://neilgebhard.github.io/weather">Regular Web Weather App</a>
+        <a href="http://neilgebhard.github.io/algorithms">Algorithms</a>
+        <a href="https://github.com/neilgebhard/grunt-shell">Grunt Frontend Architecture</a>
+    </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="lib/prism.js"></script>
-    <script src="lib/stickyfill.js"></script>
-    <script>$('body').scrollspy({ target: '.sidebar', offset: 25})</script>
-    <script>$('.sticky').Stickyfill();</script>
+    <script src="https://cdn.rawgit.com/sbstjn/timesheet.js/master/dist/timesheet.min.js"></script>
+    <script src="lib/moment.js"></script>
+    <script src="lib/typed.js"></script>
+    <script>
+        // timesheet.js
+	    var now = moment().format('MM/YYYY');
+	    new Timesheet('timesheet', 2011, 2016, [
+	        ['03/2011', '03/2014', 'Computer Science B.S.', 'ipsum'],
+	        ['06/2013', '08/2014', 'Web Development Intern, Pacific Amusement Inc.', 'default'],
+	        ['09/2013', '03/2014', 'iOS Development Intern, KidzPlan', 'default'],
+	        ['09/2013', '03/2014', 'Professor Asstistant, Kristin Tufte', 'default'],
+	        ['05/2014', now, 'Front-end Developer, Supportland', 'lorem'],
+	        ['05/2016', now, 'Full Stack Developer, WelVU', 'dolor']
+	    ]);
+
+        // typed.js
+	    $("#typed-strings").typed({
+		    strings: ['<span class="hero-title-2">Neil Gebhard</span>'],
+		    contentType: 'html',
+            typeSpeed: 25
+		});
+    </script>
 </body>
 
 </html>
