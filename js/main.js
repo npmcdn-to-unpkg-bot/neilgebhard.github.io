@@ -1,5 +1,5 @@
-// timesheet.js
 $(document).ready(function() {
+    // timesheet.js
     var now = moment().format('MM/YYYY');
     new Timesheet('timesheet', 2011, 2016, [
         ['03/2011', '03/2014', 'Computer Science B.S.', 'ipsum'],
@@ -21,10 +21,12 @@ $(document).ready(function() {
     AOS.init();
 
     // grid.js
-    var grid = new Minigrid({
-        container: '.cards',
-        item: '.card',
-        gutter: 6
-    });
-    grid.mount();
+    setTimeout(function() {
+        var grid = new Minigrid({
+            container: '.cards',
+            item: '.card',
+            gutter: 6
+        });
+        grid.mount();
+    }, 100)
 });
