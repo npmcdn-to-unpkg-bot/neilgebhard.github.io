@@ -12,12 +12,7 @@
     z-index: 0;
 }
 
-.hero-title-1 {
-    padding-top: 150px;
-    font-size: 40px;
-}
-
-.hero-title-2 {
+.hero-title {
     padding-top: 0px;
     font-size: 70px;
     font-weight: 600;
@@ -27,13 +22,13 @@
     padding: 50px 0;
 }
 
+.container {
+    max-width: 720px;
+}
+
 /* timesheet */
 .timesheet {
     height: 180px;
-}
-
-.container {
-    max-width: 720px;
 }
 
 /* typed */

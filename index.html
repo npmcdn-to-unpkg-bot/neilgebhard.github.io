@@ -9,88 +9,205 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/sbstjn/timesheet.js/master/dist/timesheet.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <style>
+    .card {
+        width: 210px;
+        display: inline-block;
+    }
+    
+    .media {
+        margin-top: 100px !important;
+    }
+    
+    .thumbnail:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    #examples > a {
+        text-decoration: none;
+    }
+    
+    body {
+        color: #666;
+    }
+    
+    .caption > p {
+        text-decoration: none;
+    }
+    </style>
 </head>
 
 <body>
     <header class="hero-top" style="background-image: url(https://static.pexels.com/assets/headers/mountains-b687f987e82bb5813f2c1551be8616a232a414dfcdfd50859a9c7204dd8d6bb4.jpg">
-    	<div style="height: 200px"></div>
-    	<span id="typed-strings"></span>
+        <div style="height: 200px"></div>
+        <span id="typed-strings"></span>
     </header>
-    <section id="content" class="container">
-        <h3 class="text-muted" style="padding-bottom: 15px">Career Timeline</h3>
-        <p id="timesheet" class="white"></p>
-        <div class="media" style="margin-top: 50px">
-            <div class="media-left">
-                <a href="supportland.com">
-                    <img class="media-object" src="img/supp-logo.png" alt="Supportland Logo">
-                </a>
+    <main id="content" class="container">
+        <section data-aos="fade-up">
+            <h3 style="padding-bottom: 35px">Career Timeline</h3>
+            <figure id="timesheet" class="white"></figure>
+        </section>
+        <section data-aos="fade-up">
+            <div class="media">
+                <div class="media-left">
+                    <a href="supportland.com">
+                        <img class="media-object" src="img/supp-logo.png" alt="Supportland Logo">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">Front-end Developer, May 2014 to Present</h3>
+                    <h4>Supportland (Portland, OR)</h4>
+                    <p>Developed a a SaaS single-page web application platform as a loyalty program for local independent businesses. Converted wireframes into Marionette views with Underscore templates. Utilized API endpoints with Backbone models. Leveraged Bootstrap to accomplish mobile responsiveness. Followed UX best practices to maximize usability. Engaged in mobile development in iOS using Swift/Xcode and Android using Java/Android Studio</p>
+                    <p>Technologies: JavaScript, HTML, CSS, Backbone.js, Marionette.js, Underscore, Bootstrap, Node.js, Gulp, Webpack, Android, Java, iOS, Swift, Git</p>
+                </div>
             </div>
-            <div class="media-body">
-                <h3 class="media-heading">Front-end Developer, May 2014 to Present</h3>
-                <h4>Supportland (Portland, OR)</h4>
-                <p>Developed a a SaaS single-page web application platform as a loyalty program for local independent businesses. Converted wireframes into Marionette views with Underscore templates. Utilized API endpoints with Backbone models. Leveraged Bootstrap to accomplish mobile responsiveness. Followed UX best practices to maximize usability. Engaged in mobile development in iOS using Swift/Xcode and Android using Java/Android Studio</p>
-                <p>Technologies: JavaScript, HTML, CSS, Backbone.js, Marionette.js, Underscore, Bootstrap, Node.js, Gulp, Webpack, Android, Java, iOS, Swift, Git</p>
+        </section>
+        <section data-aos="fade-up">
+            <div class="media">
+                <div class="media-left">
+                    <a href="welvu.com">
+                        <img class="media-object" src="img/welvu-logo.png" alt="Welvu Logo" width="150">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">Full Stack Developer, May 2016 to Present</h3>
+                    <h4>WelVU (Portland, OR)</h4>
+                    <p>Developed a web application to help patients remember what doctors say through videos, drawings, and diagrams. Implemented front-end in bootstrap with consideration to UX and backend using PHP and MySQL. Converted requirements into individual technical tasks. Tested and deployed software in AWS.</p>
+                    <p>Technologies: JavaScript, HTML, CSS, PHP, SQL, AWS, Bootstrap, Git</p>
+                </div>
             </div>
-        </div>
-        <div class="media" style="margin-top: 50px">
-            <div class="media-left">
-                <a href="welvu.com">
-                    <img class="media-object" src="img/welvu-logo.png" alt="Welvu Logo" width="150">
-                </a>
+        </section>
+        <section data-aos="fade-up">
+            <div class="media">
+                <div class="media-left">
+                    <a href="welvu.com">
+                        <img class="media-object" src="img/kidzplan-logo.png" alt="Welvu Logo" width="150">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">iOS Development Intern, Sept. 2013 to Mar. 2014</h3>
+                    <h4>WelVU (Portland, OR)</h4>
+                    <p>Designed and implemented an iOS application to help parents manage the behavior of children through a tracking system with rewards. Collaborated with client to establish requirements. Implemented views based off wireframes that integrated with backend services.</p>
+                    <p>Technologies: Xcode, iOS, Objective-C, Git</p>
+                </div>
             </div>
-            <div class="media-body">
-                <h3 class="media-heading">Full Stack Developer, May 2016 to Present</h3>
-                <h4>WelVU (Portland, OR)</h4>
-                <p>Developed a web application to help patients remember what doctors say through videos, drawings, and diagrams. Implemented front-end in bootstrap with consideration to UX and backend using PHP and MySQL. Converted requirements into individual technical tasks. Tested and deployed software in AWS.</p>
-                <p>Technologies: JavaScript, HTML, CSS, PHP, SQL, AWS, Bootstrap, Git</p>
+        </section>
+        <section id="examples" data-aos="fade-up" style="margin-top: 75px">
+            <h3>Portfolio</h3>
+            <div class="cards">
+                <div class="card">
+                    <a href="http://supportland.com/citizen/categories/all/businesses" class="thumbnail-link">
+                        <div class="thumbnail">
+                            <img src="img/supportland.jpeg" alt="Supportland">
+                            <div class="caption">
+                                <h4>Supportland</h4>
+                                <p>Single Page App Frontend</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="/algorithms" class="thumbnail-link">
+                        <div class="thumbnail">
+                            <img src="img/algorithms.jpeg" alt="Algorithms">
+                            <div class="caption">
+                                <h4>Algorithms</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="http://neilgebhard.tech" class="thumbnail-link">
+                        <div class="thumbnail">
+                            <img src="img/weather-1.jpg" alt="Node React Weather App">
+                            <div class="caption">
+                                <h4>Node React Weather App</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="http://neilgebhard.github.io/weather" class="thumbnail-link">
+                        <div class="thumbnail">
+                            <img src="img/weather-2.jpeg" alt="Vanilla Weather Web App">
+                            <div class="caption">
+                                <h4>Vanilla Weather Web App</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://github.com/neilgebhard/grunt-shell" class="thumbnail-link">
+                        <div class="thumbnail">
+                            <img src="img/frontend.jpg" alt="Grunt Frontend">
+                            <div class="caption">
+                                <h4>Grunt Frontend Architecture</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="media" style="margin-top: 50px">
-            <div class="media-left">
-                <a href="welvu.com">
-                    <img class="media-object" src="img/kidzplan-logo.png" alt="Welvu Logo" width="150">
-                </a>
-            </div>
-            <div class="media-body">
-                <h3 class="media-heading">iOS Development Intern, Sept. 2013 to Mar. 2014</h3>
-                <h4>WelVU (Portland, OR)</h4>
-                <p>Designed and implemented an iOS application to help parents manage the behavior of children through a tracking system with rewards. Collaborated with client to establish requirements. Implemented views based off wireframes that integrated with backend services.</p>
-                <p>Technologies: Xcode, iOS, Objective-C, Git</p>
-            </div>
-        </div>
-        <h3>Work Examples</h3>
-        <ul>
-            <li><a href="https://supportland.com">Supportland</a></li>
-            <li><a href="http://neilgebhard.tech">Node React Weather App</a></li>
-            <li><a href="http://neilgebhard.github.io/weather">Regular Web Weather App</a></li>
-            <li><a href="http://neilgebhard.github.io/algorithms">Algorithms</a></li>
-            <li><a href="https://github.com/neilgebhard/grunt-shell">Grunt Frontend Architecture</a></li>
-        </ul>
-    </section>
-
+        </section>
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdn.rawgit.com/sbstjn/timesheet.js/master/dist/timesheet.min.js"></script>
+    <script src="https://npmcdn.com/minigrid@3.0.5/dist/minigrid.min.js"></script>
+    <script src="lib/aos.js"></script>
     <script src="lib/moment.js"></script>
     <script src="lib/typed.js"></script>
     <script>
-        // timesheet.js
-	    var now = moment().format('MM/YYYY');
-	    new Timesheet('timesheet', 2011, 2016, [
-	        ['03/2011', '03/2014', 'Computer Science B.S.', 'ipsum'],
-	        ['06/2013', '08/2014', 'Web Development Intern, Pacific Amusement Inc.', 'default'],
-	        ['09/2013', '03/2014', 'iOS Development Intern, KidzPlan', 'default'],
-	        ['09/2013', '03/2014', 'Professor Asstistant, Kristin Tufte', 'default'],
-	        ['05/2014', now, 'Front-end Developer, Supportland', 'lorem'],
-	        ['05/2016', now, 'Full Stack Developer, WelVU', 'dolor']
-	    ]);
+    // timesheet.js
+    $(document).ready(function() {
+        var now = moment().format('MM/YYYY');
+        new Timesheet('timesheet', 2011, 2016, [
+            ['03/2011', '03/2014', 'Computer Science B.S.', 'ipsum'],
+            ['06/2013', '08/2014', 'Web Development Intern, Pacific Amusement Inc.', 'default'],
+            ['09/2013', '03/2014', 'iOS Development Intern, KidzPlan', 'default'],
+            ['09/2013', '03/2014', 'Professor Asstistant, Kristin Tufte', 'default'],
+            ['05/2014', now, 'Front-end Developer, Supportland', 'lorem'],
+            ['05/2016', now, 'Full Stack Developer, WelVU', 'dolor']
+        ]);
 
         // typed.js
-	    $("#typed-strings").typed({
-		    strings: ['<span class="hero-title-2">Neil Gebhard</span>'],
-		    contentType: 'html',
+        $("#typed-strings").typed({
+            strings: ['<span class="hero-title">Neil Gebhard</span>'],
+            contentType: 'html',
             typeSpeed: 25
-		});
+        });
+
+        // aos.js
+        AOS.init();
+
+        // minigrid.js
+        // var grid = new Minigrid({
+        //     container: '.cards',
+        //     item: '.card',
+        //     gutter: 20
+        // });
+        // grid.mount();
+    });
+    (function() {
+        var grid;
+
+        function init() {
+            grid = new Minigrid({
+                container: '.cards',
+                item: '.card',
+                gutter: 12
+            });
+            grid.mount();
+        }
+
+        // mount
+        function update() {
+            grid.mount();
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+        window.addEventListener('resize', update);
+    })();
     </script>
 </body>
 
