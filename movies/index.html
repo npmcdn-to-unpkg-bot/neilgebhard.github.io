@@ -1,27 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+    .card-content .detail {
+        margin-right: 20px;
+    }
+    .page-footer {
+    	background-color: white !important;
+    }
+    footer.page-footer .footer-copyright {
+    	color: black;
+    }
+    .footer-copyright .fa {
+    	color: #333;
+    	font-size: 20px;
+   		margin-left: 10px;
+    }
+    .fa-heart {
+    	color: red
+    }
+    </style>
 </head>
 
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="/lib/reqwest.js"></script>
-    <script>
-    var url = 'https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=e7daa04756450d99beb62cb1339a0566';
-    $.ajax({
-        url: url,
-        crossDomain: false
-    }).then(function(response) {
-        console.log(response);
-    });
-    </script>
+    <main id="content">
+    	<main class="container">		
+	        <h3>Movies In Theaters</h3>
+	        <p>Movies released in the past month</p>
+	        <content id="movies"></content>
+    	</main>
+        <footer class="page-footer">
+	        <div class="footer-copyright">
+	            <div class="container">
+	                <i class="fa fa-heart" aria-hidden="true"></i> 2016 Neil Gebhard
+	                <a class="right" href="https://github.com/neilgebhard"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+	                <a class="right" href="mailto:neilgebhard@gmail.com?Subject=From%20Your%20Weather%20App"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+	                <a class="right" href="https://twitter.com/judobaseball"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	                <a class="right" href="https://www.linkedin.com/in/neil-gebhard-3a72068a"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+	            </div>
+	        </div>
+	    </footer>
+        <script src="https://use.fontawesome.com/699e05797e.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/js/materialize.js"></script>
+        <script type="text/javascript" src="/lib/moment.js"></script>
+        <script>
+        var IMAGE_URL = 'http://image.tmdb.org/t/p/w500';
+        var API_URL = 'https://api.themoviedb.org/3'
+        var API_KEY = 'e7daa04756450d99beb62cb1339a0566'
+        var monthAgo = moment().subtract(1, 'months').format("YYYY-MM-DD");
+        var today = moment().format("YYYY-MM-DD");
+        var url = API_URL + `/discover/movie?
+        					primary_release_date.gte=${monthAgo}
+        					&primary_release_date.lte=${today}
+        					&api_key=${API_KEY}`;
+
+        $.ajax({
+            url: url,
+            dataType: 'json'
+        }).then(function(res) {
+            console.log(res);
+            res.results.forEach(function(result) {
+                $("#movies").append(`
+            		<div class="card horizontal">
+						<div class="card-image">
+						    <img src="${IMAGE_URL + result.poster_path}" style="height: 250px">
+						</div>
+						<div class="card-stacked">
+						    <div class="card-content">
+						    	<h5>${result.title}</h5>
+						    	<p>
+						    		<span class="detail">Popularity: ${result.popularity}</span> 
+						    		<span class="detail">Vote average: ${result.vote_average}</span>
+						    		<span class="detail">Vote count: ${result.vote_count}</span>
+						    	</p>
+						        <p>${result.overview}</p>
+						    </div>
+						</div>
+					</div>`);
+            });
+        });
+        </script>
 </body>
 
 </html>
