@@ -25,7 +25,7 @@ $(document).ready(function() {
         var grid = new Minigrid({
             container: '.cards',
             item: '.card',
-            gutter: 6
+            gutter: 15
         });
         grid.mount();
     }, 100)
