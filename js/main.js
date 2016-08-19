@@ -28,5 +28,5 @@ $(document).ready(function() {
             gutter: 15
         });
         grid.mount();
-    }, 100)
+    }, 500)
 });
