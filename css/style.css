@@ -63,11 +63,12 @@ body {
 
 /* timesheet */
 #timesheet-section {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .timesheet {
     height: 180px;
+    background-color: #FFF;
 }
 
 /* typed */
