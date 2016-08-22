@@ -30,12 +30,22 @@ body {
     color: #666;
 }
 
-.media {
-    margin-top: 100px !important;
+/* portfolio */
+#portfolio-section > a {
+    text-decoration: none;
 }
 
-#examples > a {
-    text-decoration: none;
+#portfolio-section {
+    margin-top: 25px
+}
+
+/* resume */
+#resume-section {
+    margin-top: 25px;
+}
+
+.media {
+    margin-bottom: 75px !important;
 }
 
 .card {
@@ -52,6 +62,10 @@ body {
 }
 
 /* timesheet */
+#timesheet-section {
+    margin-top: 50px;
+}
+
 .timesheet {
     height: 180px;
 }
